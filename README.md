@@ -9,9 +9,10 @@ El objetivo principal es diseñar y simular una **máquina expendedora** con dif
 
 - **Proyect_1.7z** → Archivo comprimido con el proyecto completo listo para abrir en Quartus.
 - **monedasdiagram.png** → Diagrama del módulo de monedas.
-- **inventariodiagram.png** → Diagrama del módulo de inventario.
+- **almacen.png** → Diagrama del módulo de inventario.
 - **contador_general_diagram.png** → Diagrama del contador general (control del tiempo/LEDs).
-- **diagramacomplete.png** → Diagrama de bloques del sistema completo.
+- **diagrama-complete.png** → Diagrama de bloques del sistema completo.
+- **component_credito.png** → Diagrama de bloques del credito
 
 ---
 
@@ -21,16 +22,17 @@ El objetivo principal es diseñar y simular una **máquina expendedora** con dif
   Gestiona el ingreso de monedas (500 y 1000) y acumula el saldo disponible.
 
 - **Inventario**  
-  Verifica la disponibilidad del producto, autoriza compras y calcula el vuelto.
-
-- **Mux 2x1**  
-  Selecciona entre saldo y vuelto, según si se cancela la compra.
+  Verifica la disponibilidad del producto y entrega el precio del producto.
 
 - **Reloj / Contador general**  
   Controla el tiempo de entrega y genera parpadeo en el LED rojo.
 
 - **Decodificador BCD (Decoin_bcd)**  
   Convierte el saldo/vuelto en salidas para los displays de 7 segmentos.
+
+- **Credito**
+  Verifica si es posible la compra y la realiza, además de inicializar el contador general.
+  
 
 ---
 
